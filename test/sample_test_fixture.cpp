@@ -16,18 +16,19 @@ class TestFixture : public testing::Test
 		}*/
 };
 
-//‰Šúİ’è(sample_test.initsettings())‚ÅƒNƒ‰ƒX“à‚Ì•Ï”‚ª‰Šú‰»‚Å‚«‚Ä‚¢‚é‚©‚ÌŠm”F
+//åˆæœŸè¨­å®š(sample_test.initsettings())ã§ã‚¯ãƒ©ã‚¹å†…ã®å¤‰æ•°ãŒåˆæœŸåŒ–ã§ãã¦ã„ã‚‹ã‹ã®ç¢ºèª
 TEST_F(TestFixture, TestFunctionA)
 {
-	//ŠeƒNƒ‰ƒX‚Ìƒƒ“ƒo•Ï”‚Ì”äŠrŠm”F
+	//å„ã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒå¤‰æ•°ã®ä¸€è‡´ç¢ºèª
 	EXPECT_EQ(sample_test.int_val, 0);
 	EXPECT_EQ(sample_test.double_val, 0.0);
 	EXPECT_EQ(sample_test.char_val, 'A');
 }
 
-//ŠÖ”‚ğÀs‚µ‚½Œã‚ÌƒNƒ‰ƒX“à•Ï”‚ÌŠm”F
+//é–¢æ•°ã‚’å®Ÿè¡Œã—ãŸå¾Œã®ã‚¯ãƒ©ã‚¹å†…å¤‰æ•°ã®ç¢ºèª
 TEST_F(TestFixture, TestFunctionB)
 {
+<<<<<<< HEAD
 	int i = 5;
 	double d = 5.5;
 	char c = 'B';
@@ -38,15 +39,24 @@ TEST_F(TestFixture, TestFunctionB)
 	EXPECT_EQ(sample_test.int_val, i);
 	EXPECT_EQ(sample_test.double_val, d);
 	EXPECT_EQ(sample_test.char_val, c);
+=======
+	//é–¢æ•°ã®å®Ÿè¡Œ
+	sample_test.testfunction01();
+
+	//å„ã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒå¤‰æ•°ã®ä¸€è‡´ç¢ºèª
+	EXPECT_EQ(sample_test.int_val, 5);
+	EXPECT_EQ(sample_test.double_val, 5.5);
+	EXPECT_EQ(sample_test.char_val, 'B');
+>>>>>>> ad326eb922b7eb8f9fafda84498690feec0977ab
 }
 
-//ŠÖ”‚ÌÀsŒ‹‰Ê‚ÌŠm”F
+//é–¢æ•°ã®å®Ÿè¡Œçµæœã®ç¢ºèª
 TEST_F(TestFixture, TestFunctionC)
 {
-	//–ß‚è’l‚ªtrue‚©‚ÌŠm”F
+	//æˆ»ã‚Šå€¤ãŒtrueã‹ã®ç¢ºèª
 	EXPECT_TRUE(sample_test.testfunction02(5));
 
-	//–ß‚è’l‚ªfalse‚©‚ÌŠm”F
+	//æˆ»ã‚Šå€¤ãŒfalseã‹ã®ç¢ºèª
 	EXPECT_FALSE(sample_test.testfunction02(0));
 	
 }
