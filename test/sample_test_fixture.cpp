@@ -28,13 +28,16 @@ TEST_F(TestFixture, TestFunctionA)
 //関数を実行した後のクラス内変数の確認
 TEST_F(TestFixture, TestFunctionB)
 {
+	int i = 5;
+	double d = 5.5;
+	char c = 'B';
 	//関数の実行
-	sample_test.testfunction01();
+	sample_test.testfunction01(i,d,c);
 
 	//各クラスのメンバ変数の比較確認
-	EXPECT_EQ(sample_test.int_val, 5);
-	EXPECT_EQ(sample_test.double_val, 5.5);
-	EXPECT_EQ(sample_test.char_val, 'B');
+	EXPECT_EQ(sample_test.int_val, i);
+	EXPECT_EQ(sample_test.double_val, d);
+	EXPECT_EQ(sample_test.char_val, c);
 }
 
 //関数の実行結果の確認

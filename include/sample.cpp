@@ -33,10 +33,10 @@ int SampleTest::function5() {
 }
 
 //メンバ変数に適当な値を代入
-void SampleTest::testfunction01() {
-	int_val = 5;
-	double_val = 5.5;
-	char_val = 'B';
+void SampleTest::testfunction01(int i,double d, char c) {
+	int_val = i;
+	double_val = d;
+	char_val = c;
 }
 
 //メンバ変数int_valに引数の値を加算する

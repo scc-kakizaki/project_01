@@ -13,7 +13,7 @@ class SampleTest {
 		
 		int function5(); //10‚ğ•Ô‚·
 
-		void testfunction01(); //ƒƒ“ƒo•Ï”‚É‘ã“ü
+		void testfunction01(int i,double d,char c); //ƒƒ“ƒo•Ï”‚É‘ã“ü
 		
 		bool testfunction02(int a); //ƒƒ“ƒo•Ï”int_val‚Éˆø”a‚ğ‰ÁZ
 
