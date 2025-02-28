@@ -16,78 +16,78 @@ protected:
 	}*/
 };
 
-//‰Šúİ’è(sample_test.initsettings())‚Åƒƒ“ƒo•Ï”‚ª‰Šú‰»‚Å‚«‚Ä‚¢‚é‚©‚ÌŠm”F
+//åˆæœŸè¨­å®š(sample_test.initsettings())ã§ãƒ¡ãƒ³ãƒå¤‰æ•°ãŒåˆæœŸåŒ–ã§ãã¦ã„ã‚‹ã‹ã®ç¢ºèª
 TEST_F(TestFixture, TestFunctionA)
 {
-	//ŠeƒNƒ‰ƒX‚Ìƒƒ“ƒo•Ï”‚Ìˆê’vŠm”F
+	//å„ã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒå¤‰æ•°ã®ä¸€è‡´ç¢ºèª
 	EXPECT_EQ(sample_test.int_val, 0);
 	EXPECT_EQ(sample_test.double_val, 0.0);
 	EXPECT_EQ(sample_test.char_val, 'A');
 }
 
-//ŠÖ”‚ğÀs‚µ‚½Œã‚Ìƒƒ“ƒo•Ï”‚ÌŠm”F
+//é–¢æ•°ã‚’å®Ÿè¡Œã—ãŸå¾Œã®ãƒ¡ãƒ³ãƒå¤‰æ•°ã®ç¢ºèª
 TEST_F(TestFixture, TestFunctionB)
 {
 	int i = 5;
 	double d = 5.5;
 	char c = 'B';
-	//ŠeƒNƒ‰ƒX‚Ìƒƒ“ƒo•Ï”‚Ìˆê’vŠm”F
+	//å„ã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒå¤‰æ•°ã®ä¸€è‡´ç¢ºèª
 	EXPECT_EQ(sample_test.int_val, 0);
 	EXPECT_EQ(sample_test.double_val, 0.0);
 	EXPECT_EQ(sample_test.char_val, 'A');
 
-	//ŠÖ”‚ÌÀs
+	//é–¢æ•°ã®å®Ÿè¡Œ
 	sample_test.testfunction01(i, d, c);
 
-	//ŠeƒNƒ‰ƒX‚Ìƒƒ“ƒo•Ï”‚Ìˆê’vŠm”F
+	//å„ã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒå¤‰æ•°ã®ä¸€è‡´ç¢ºèª
 	EXPECT_EQ(sample_test.int_val, i);
 	EXPECT_EQ(sample_test.double_val, d);
 	EXPECT_EQ(sample_test.char_val, c);
 }
 
-//ŠÖ”‚ÌÀsŒ‹‰Ê‚ÌŠm”F
+//é–¢æ•°ã®å®Ÿè¡Œçµæœã®ç¢ºèª
 TEST_F(TestFixture, TestFunctionC)
 {
-	//–ß‚è’l‚ªtrue‚©‚ÌŠm”F
+	//æˆ»ã‚Šå€¤ãŒtrueã‹ã®ç¢ºèª
 	EXPECT_TRUE(sample_test.testfunction02(5));
 
-	//ƒƒ“ƒo•Ï”int_val‚Ì’lŠm”F
+	//ãƒ¡ãƒ³ãƒå¤‰æ•°int_valã®å€¤ç¢ºèª
 	EXPECT_EQ(sample_test.int_val, 5);
 
-	//–ß‚è’l‚ªfalse‚©‚ÌŠm”F
+	//æˆ»ã‚Šå€¤ãŒfalseã‹ã®ç¢ºèª
 	EXPECT_FALSE(sample_test.testfunction02(-5));
 
-	//ƒƒ“ƒo•Ï”int_val‚Ì’lŠm”F
+	//ãƒ¡ãƒ³ãƒå¤‰æ•°int_valã®å€¤ç¢ºèª
 	EXPECT_EQ(sample_test.int_val, 5);
 }
 
 /*
 
-//ƒeƒ“ƒvƒŒ[ƒg
+//ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ
 
-//ƒeƒXƒgŠÖ”‚Ìì¬
+//ãƒ†ã‚¹ãƒˆé–¢æ•°ã®ä½œæˆ
 TEST_F(TestFixture, TestFunctionXXX)
 {
 }
 
-//ƒAƒT[ƒVƒ‡ƒ“
-	EXPECT_TRUE(condition);			:@condition == TRUE
-	EXPECT_FALSE(condition);		:@condition == FALSE
-	EXPECT_EQ(val1,val2);			:@val1 == val2  ¦std::string”äŠr‰Â”\
-	EXPECT_NE(val1,val2);			:@val1 != val2  ¦std::string”äŠr‰Â”\
-	EXPECT_LT(val1,val2);			:@val1 < val2  ¦std::string”äŠr‰Â”\
-	EXPECT_LE(val1,val2);			:@val1 <= val2  ¦std::string”äŠr‰Â”\
-	EXPECT_GT(val1,val2);			:@val1 > val2  ¦std::string”äŠr‰Â”\
-	EXPECT_GE(val1,val2);			:@val1 >= val2  ¦std::string”äŠr‰Â”\
-	EXPECT_STREQ(str1,str2);		:@2‚Â‚Ì•¶š—ñ‚ª“™‚µ‚¢@¦C•¶š—ñ—p(char*“™)
-	EXPECT_STRNE(str1,str2);		:@2‚Â‚Ì•¶š—ñ‚ª“™‚µ‚­‚È‚¢@¦C•¶š—ñ—p(char*“™)
-	EXPECT_STRCASEEQ(str1,str2);	:@2‚Â‚Ì•¶š—ñ‚ª“™‚µ‚¢(‘å•¶š/¬•¶š‚ğ–³‹)@¦C•¶š—ñ—p(char*“™)
-	EXPECT_STRCASENE(str1,str2);	:@2‚Â‚Ì•¶š—ñ‚ª“™‚µ‚­‚È‚¢(‘å•¶š/¬•¶š‚ğ–³‹)@¦C•¶š—ñ—p(char*“™)
-	EXPECT_THROW(func,exception);	:@func‚ªw’è‚µ‚½exception‚ğ“Š‚°‚é
-	EXPECT_ANY_THROW(func);			:  func‚ª‰½‚ç‚©‚Ì—áŠO‚ğ“Š‚°‚é
-	EXPECT_NO_THROW(func);			:  func‚ªˆêØ—áŠO‚ğ“Š‚°‚È‚¢
-	EXPECT_FLOAT_EQ(val1,val2);		:@2‚Â‚Ìfloat’l‚ª‚Ù‚Ú“™‚µ‚¢@@¦4ULPsˆÈ“à
-	EXPECT_DOUBLE_EQ(val1,val2);	:@2‚Â‚Ìdouble’l‚ª‚Ù‚Ú“™‚µ‚¢@¦4ULPsˆÈ“à
-	EXPECT_NEAR(val1,val2,abs);		:@val1‚Æval2‚Ì·‚ªabsˆÈ“à
-	EXPECT_THAT(val,matcher);		:@googlemock‚ÌMatcher‚ğg—p‚·‚é
+//ã‚¢ã‚µãƒ¼ã‚·ãƒ§ãƒ³
+	EXPECT_TRUE(condition);		:ã€€condition == TRUE
+	EXPECT_FALSE(condition);	:ã€€condition == FALSE
+	EXPECT_EQ(val1,val2);		:ã€€val1 == val2  â€»std::stringæ¯”è¼ƒå¯èƒ½
+	EXPECT_NE(val1,val2);		:ã€€val1 != val2  â€»std::stringæ¯”è¼ƒå¯èƒ½
+	EXPECT_LT(val1,val2);		:ã€€val1 < val2  â€»std::stringæ¯”è¼ƒå¯èƒ½
+	EXPECT_LE(val1,val2);		:ã€€val1 <= val2  â€»std::stringæ¯”è¼ƒå¯èƒ½
+	EXPECT_GT(val1,val2);		:ã€€val1 > val2  â€»std::stringæ¯”è¼ƒå¯èƒ½
+	EXPECT_GE(val1,val2);		:ã€€val1 >= val2  â€»std::stringæ¯”è¼ƒå¯èƒ½
+	EXPECT_STREQ(str1,str2);	:ã€€2ã¤ã®æ–‡å­—åˆ—ãŒç­‰ã—ã„ã€€â€»Cæ–‡å­—åˆ—ç”¨(char*ç­‰)
+	EXPECT_STRNE(str1,str2);	:ã€€2ã¤ã®æ–‡å­—åˆ—ãŒç­‰ã—ããªã„ã€€â€»Cæ–‡å­—åˆ—ç”¨(char*ç­‰)
+	EXPECT_STRCASEEQ(str1,str2);	:ã€€2ã¤ã®æ–‡å­—åˆ—ãŒç­‰ã—ã„(å¤§æ–‡å­—/å°æ–‡å­—ã‚’ç„¡è¦–)ã€€â€»Cæ–‡å­—åˆ—ç”¨(char*ç­‰)
+	EXPECT_STRCASENE(str1,str2);	:ã€€2ã¤ã®æ–‡å­—åˆ—ãŒç­‰ã—ããªã„(å¤§æ–‡å­—/å°æ–‡å­—ã‚’ç„¡è¦–)ã€€â€»Cæ–‡å­—åˆ—ç”¨(char*ç­‰)
+	EXPECT_THROW(func,exception);	:ã€€funcãŒæŒ‡å®šã—ãŸexceptionã‚’æŠ•ã’ã‚‹
+	EXPECT_ANY_THROW(func);		:  funcãŒä½•ã‚‰ã‹ã®ä¾‹å¤–ã‚’æŠ•ã’ã‚‹
+	EXPECT_NO_THROW(func);		:  funcãŒä¸€åˆ‡ä¾‹å¤–ã‚’æŠ•ã’ãªã„
+	EXPECT_FLOAT_EQ(val1,val2);	:ã€€2ã¤ã®floatå€¤ãŒã»ã¼ç­‰ã—ã„ã€€ã€€â€»4ULPsä»¥å†…
+	EXPECT_DOUBLE_EQ(val1,val2);	:ã€€2ã¤ã®doubleå€¤ãŒã»ã¼ç­‰ã—ã„ã€€â€»4ULPsä»¥å†…
+	EXPECT_NEAR(val1,val2,abs);	:ã€€val1ã¨val2ã®å·®ãŒabsä»¥å†…
+	EXPECT_THAT(val,matcher);	:ã€€googlemockã®Matcherã‚’ä½¿ç”¨ã™ã‚‹
 */
