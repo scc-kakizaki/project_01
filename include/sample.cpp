@@ -1,47 +1,47 @@
 #include "sample.h"
 
-//‰Šúİ’è
+//åˆæœŸè¨­å®š
 void SampleTest::initsettings() {
 	int_val = 0;
 	double_val = 0.0;
 	char_val = 'A';
 }
 
-//‘«‚µZ‚ÌŒ‹‰Ê‚ğ•Ô‚·
+//è¶³ã—ç®—ã®çµæœã‚’è¿”ã™
 int SampleTest::function1(int a, int b) {
 	return a + b;
 }
 
-//ˆø‚«Z‚ÌŒ‹‰Ê‚ğ•Ô‚·
+//å¼•ãç®—ã®çµæœã‚’è¿”ã™
 int SampleTest::function2(int a, int b) {
 	return a - b;
 }
 
-//Š|‚¯Z‚ÌŒ‹‰Ê‚ğ•Ô‚·
+//æ›ã‘ç®—ã®çµæœã‚’è¿”ã™
 double SampleTest::function3(double a, double b) {
 	return a * b;
 }
 
-//Š„‚èZ‚ÌŒ‹‰Ê‚ğ•Ô‚·
+//å‰²ã‚Šç®—ã®çµæœã‚’è¿”ã™
 double SampleTest::function4(double a, double b) {
 	return a / b;
 }
 
-//ŒÅ’è’l‚ğ•Ô‚·
+//å›ºå®šå€¤ã‚’è¿”ã™
 int SampleTest::function5() {
 	return 10;
 }
 
-//ƒƒ“ƒo•Ï”‚É“K“–‚È’l‚ğ‘ã“ü
+//ãƒ¡ãƒ³ãƒå¤‰æ•°ã«å€¤ã‚’ä»£å…¥
 void SampleTest::testfunction01(int i,double d, char c) {
 	int_val = i;
 	double_val = d;
 	char_val = c;
 }
 
-//ƒƒ“ƒo•Ï”int_val‚Éˆø”‚Ì’l‚ğ‰ÁZ‚·‚é
+//ãƒ¡ãƒ³ãƒå¤‰æ•°int_valã«å¼•æ•°ã®å€¤ã‚’åŠ ç®—ã™ã‚‹
 bool SampleTest::testfunction02(int a) {
-	//ˆø”‚Ì’l‚ª0‚æ‚è‘å‚«‚¢’l‚Å‚ ‚é‚±‚Æ‚ÌŠm”F
+	//å¼•æ•°ã®å€¤ãŒ0ã‚ˆã‚Šå¤§ãã„å€¤ã§ã‚ã‚‹ã“ã¨ã®ç¢ºèª
 	if (0 < a) {
 		int_val = function1(int_val, a);
 		return true;
