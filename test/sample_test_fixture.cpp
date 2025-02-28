@@ -19,7 +19,7 @@ protected:
 //初期設定(sample_test.initsettings())でクラス内の変数が初期化できているかの確認
 TEST_F(TestFixture, TestFunctionA)
 {
-	//各クラスのメンバ変数の比較確認
+	//各クラスのメンバ変数の一致確認
 	EXPECT_EQ(sample_test.int_val, 0);
 	EXPECT_EQ(sample_test.double_val, 0.0);
 	EXPECT_EQ(sample_test.char_val, 'A');
@@ -31,10 +31,15 @@ TEST_F(TestFixture, TestFunctionB)
 	int i = 5;
 	double d = 5.5;
 	char c = 'B';
+	//各クラスのメンバ変数の一致確認
+	EXPECT_EQ(sample_test.int_val, 0);
+	EXPECT_EQ(sample_test.double_val, 0.0);
+	EXPECT_EQ(sample_test.char_val, 'A');
+
 	//関数の実行
 	sample_test.testfunction01(i, d, c);
 
-	//各クラスのメンバ変数の比較確認
+	//各クラスのメンバ変数の一致確認
 	EXPECT_EQ(sample_test.int_val, i);
 	EXPECT_EQ(sample_test.double_val, d);
 	EXPECT_EQ(sample_test.char_val, c);
@@ -46,9 +51,14 @@ TEST_F(TestFixture, TestFunctionC)
 	//戻り値がtrueかの確認
 	EXPECT_TRUE(sample_test.testfunction02(5));
 
-	//戻り値がfalseかの確認
-	EXPECT_FALSE(sample_test.testfunction02(0));
+	//メンバ変数int_valの値確認
+	EXPECT_EQ(sample_test.int_val, 5);
 
+	//戻り値がfalseかの確認
+	EXPECT_FALSE(sample_test.testfunction02(-5));
+
+	//メンバ変数int_valの値確認
+	EXPECT_EQ(sample_test.int_val, 5);
 }
 
 /*
