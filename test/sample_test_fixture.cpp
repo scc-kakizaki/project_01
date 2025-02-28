@@ -16,7 +16,7 @@ protected:
 	}*/
 };
 
-//初期設定(sample_test.initsettings())でクラス内の変数が初期化できているかの確認
+//初期設定(sample_test.initsettings())でメンバ変数が初期化できているかの確認
 TEST_F(TestFixture, TestFunctionA)
 {
 	//各クラスのメンバ変数の一致確認
@@ -25,7 +25,7 @@ TEST_F(TestFixture, TestFunctionA)
 	EXPECT_EQ(sample_test.char_val, 'A');
 }
 
-//関数を実行した後のクラス内変数の確認
+//関数を実行した後のメンバ変数の確認
 TEST_F(TestFixture, TestFunctionB)
 {
 	int i = 5;
